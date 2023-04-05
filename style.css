@@ -1,0 +1,117 @@
+@font-face {
+    font-family: 'PP';
+    font-style: normal;
+    font-weight: lighter;
+    src: local('PP Fragment Serif Light'), url('./fonts/PPFragment-SerifLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PP';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PP Fragment Text Regular'), url('PPFragment-TextRegular.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'PP';
+    font-style: normal;
+    font-weight: bold;
+    src: local('PP Fragment Serif ExtraBold'), url('./fonts/PPFragment-SansExtraBold.woff') format('woff');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+:root{
+    --dark-green: #023436;
+    --light-green: #2D9ABB;
+    --violet-purple: #832AD0;
+    --light-blue: #3C249C;
+    --dark-blue: #0B1D41;
+
+
+    --bar-thickness: 53px;
+}
+
+body {
+    font-family: 'PP', sans-serif;
+    background-color: var(--light-blue);
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+}
+
+.title{
+    font-weight: 500;
+    letter-spacing: 5px;
+    word-spacing: 6px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    height: var(--bar-thickness);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-t{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-l{
+    padding-right: 30px;
+}
+
+.sidebar{
+    padding: 0 15px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+
+    width: var(--bar-thickness);
+    height: 100%;
+}
+
+.sidebar p{
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    letter-spacing: 5px;
+    word-spacing: 14px;
+    text-align: center;
+}
+
+.sidetext{
+    flex: 1;
+    display: flex;
+}
+
+.logo{
+    width: 50px;
+    padding: 10px;
+    fill: white;
+}
