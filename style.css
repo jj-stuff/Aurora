@@ -97,21 +97,69 @@ header{
     height: 100%;
 }
 
-.sidebar p{
+.sidetext{
+    flex: 1;
+    display: flex;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     letter-spacing: 5px;
     word-spacing: 14px;
     text-align: center;
+    gap: 30px;
 }
 
-.sidetext{
-    flex: 1;
-    display: flex;
+.small{
+    font-size: 10px;
 }
 
 .logo{
     width: 50px;
     padding: 10px;
     fill: white;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.wrap{
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    gap: 400px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.big{
+    font-size: 5rem;
+}
+
+.sat{
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    gap: 50px;
+}
+
+.sat > *{
+    flex: 1;
+}
+
+.text{
+    align-items: center;
+    display: flex;
+}
+
+.text ul{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
 }
