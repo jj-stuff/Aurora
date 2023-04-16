@@ -35,6 +35,7 @@
     --dark-blue: #0B1D41;
 
     --bar-thickness: 53px;
+
 }
 
 body {
@@ -51,8 +52,21 @@ body::before {
     inset: 0;
     background-position: center 10%;
     z-index: -1;
-    background-image: url('/bg.jpg');
+    background-image: url(/img/bg.jpg);
     filter: blur(5px);
+}
+
+h1,
+.glow {
+    --glow-color: rgb(255, 255, 255);
+    /* define the glow color */
+    --glow-spread: 4px;
+    /* define the glow spread */
+    color: #fff;
+    /* set the color of the text */
+    text-shadow: 0 0 var(--glow-spread) var(--glow-color);
+    line-height: 1.2;
+    /* adjust the line-height */
 }
 
 ul {
@@ -176,15 +190,39 @@ main {
 
 
 
-h1, .glow{
-    --glow-color: rgb(255, 255, 255); /* define the glow color */
-    --glow-spread: 4px; /* define the glow spread */
-    color: #fff; /* set the color of the text */
-    text-shadow: 0 0 var(--glow-spread) var(--glow-color);
-    line-height: 1.2; /* adjust the line-height */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
 }
 
-footer{
+.loading-screen.hidden{
+    opacity: 0;
+}
+
+.loading-bar-container {
+    width: 400px;
+    height: 30px;
+    border: 2px solid #fff;
+}
+
+.loading-bar {
+    height: 100%;
+    background-color: rgb(37, 204, 255);
+    width: 0%;
+    transition: width 0.2s ease-in-out;
+}
+
+footer {
     text-align: center;
     padding: 10px;
 }
