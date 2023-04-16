@@ -20,28 +20,39 @@
     src: local('PP Fragment Serif ExtraBold'), url('./fonts/PPFragment-SansExtraBold.woff') format('woff');
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --dark-green: #023436;
     --light-green: #2D9ABB;
     --violet-purple: #832AD0;
     --light-blue: #3C249C;
     --dark-blue: #0B1D41;
 
-
     --bar-thickness: 53px;
 }
 
 body {
     font-family: 'PP', sans-serif;
-    background-color: var(--light-blue);
+    background-color: black;
     color: white;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-position: center 10%;
+    z-index: -1;
+    background-image: url('/bg.jpg');
+    filter: blur(5px);
 }
 
 ul {
@@ -57,13 +68,13 @@ a {
     text-decoration: none;
 }
 
-.title{
+.title {
     font-weight: 500;
     letter-spacing: 5px;
     word-spacing: 6px;
 }
 
-header{
+header {
     position: fixed;
     width: 100%;
     height: var(--bar-thickness);
@@ -74,17 +85,17 @@ header{
 
 }
 
-.header-t{
+.header-t {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.header-l{
+.header-l {
     padding-right: 30px;
 }
 
-.sidebar{
+.sidebar {
     padding: 0 15px;
     display: flex;
     position: fixed;
@@ -92,12 +103,11 @@ header{
     align-items: center;
     gap: 20px;
     justify-content: flex-end;
-
     width: var(--bar-thickness);
     height: 100%;
 }
 
-.sidetext{
+.sidetext {
     flex: 1;
     display: flex;
     writing-mode: vertical-lr;
@@ -108,58 +118,73 @@ header{
     gap: 30px;
 }
 
-.small{
+.small {
     font-size: 10px;
 }
 
-.logo{
+.logo {
     width: 50px;
     padding: 10px;
     fill: white;
 }
 
 
-main{
+main {
     display: flex;
     justify-content: center;
     margin: 100px;
 }
 
-.wrap{
+.wrap {
     display: flex;
     flex-direction: column;
     padding: 150px 0;
     gap: 400px;
 }
 
-.top{
+.top {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.big{
+.big {
     font-size: 5rem;
 }
 
-.sat{
+.sat {
     display: flex;
     justify-content: center;
     padding: 100px;
     gap: 50px;
 }
 
-.sat > *{
+.sat>* {
     flex: 1;
 }
 
-.text{
+.text {
     align-items: center;
     display: flex;
 }
 
-.text ul{
+.text ul {
     display: flex;
     flex-direction: column;
     text-align: left;
+}
+
+
+
+h1, .glow{
+    --glow-color: rgb(255, 255, 255); /* define the glow color */
+    --glow-spread: 4px; /* define the glow spread */
+    color: #fff; /* set the color of the text */
+    text-shadow: 0 0 var(--glow-spread) var(--glow-color);
+    line-height: 1.2; /* adjust the line-height */
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
 }
