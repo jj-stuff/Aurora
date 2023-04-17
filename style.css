@@ -74,8 +74,18 @@ ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 24px;
 }
+
+.fa-brands{
+    font-size: 24px;
+}
+
+.fa-brands:hover{
+    cursor: pointer;
+    text-shadow: 0 0 2px #fff;
+}
+
 
 a {
     color: currentColor;
