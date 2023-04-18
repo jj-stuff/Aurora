@@ -31,3 +31,16 @@ window.addEventListener('load', function() {
   
   const startTime = new Date().getTime();
 });
+
+
+window.addEventListener("scroll", function() {
+  // Get the current scroll position
+  let scrollPosition = window.scrollY;
+
+  // Calculate the opacity of the background color based on the scroll position
+  let opacity = Math.max(1 - (scrollPosition / 1000), 0.5);
+
+  document.body.style.setProperty("--background-opacity", opacity);
+  // document.body.style.backgroundColor = "rgba(0, 0, 0, " + opacity + ")";
+});
+
