@@ -71,7 +71,7 @@ body::before {
     transition: opacity 0.5s ease-out;
 }
 
-.loading-screen.hidden{
+.loading-screen.hidden {
     opacity: 0;
 }
 
@@ -88,7 +88,8 @@ body::before {
     transition: width 0.2s ease-in-out;
 }
 
-h1, .glow {
+h1,
+.glow {
     --glow-color: rgb(255, 255, 255);
     /* define the glow color */
     --glow-spread: 4px;
@@ -108,11 +109,11 @@ ul {
     gap: 24px;
 }
 
-.fa-brands{
+.fa-brands {
     font-size: 24px;
 }
 
-.fa-brands:hover{
+.fa-brands:hover {
     cursor: pointer;
     text-shadow: 0 0 2px #fff;
 }
@@ -229,14 +230,36 @@ main {
     text-align: left;
 }
 
-iframe{
+.section2 {
+    position: relative;
+    text-align: center;
+}
+
+.section2>h1{
+    margin-bottom: 100px;
+}
+
+.section2>h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 23px;
+    font-weight: lighter;
+    word-spacing: 8px;
+    width: 80%;
+    line-height: 2rem;
+}
+
+iframe {
     aspect-ratio: 16/9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.vid{
+.vid {
     display: flex;
     justify-content: center;
     padding: 100px 0;
@@ -248,7 +271,7 @@ footer {
     padding: 10px;
 }
 
-.footer-socials{
+.footer-socials {
     display: flex;
     justify-content: center;
     padding: 15px;
