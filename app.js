@@ -1,7 +1,12 @@
+
+document.documentElement.style.overflow = "hidden";
+document.body.style.overflow = "hidden";
+
 window.addEventListener('load', function() {
   const loadingBar = document.querySelector('.loading-bar');
   let progress = 0;
-  
+
+
   const intervalId = setInterval(function() {
     progress += Math.random() * 40;
     if (progress >= 100) {
@@ -13,7 +18,9 @@ window.addEventListener('load', function() {
       const remaining = Math.max(0, 1500 - elapsed);
       setTimeout(function() {
         loadingScreen.style.opacity = 0;
-        setTimeout(function() {
+        document.documentElement.style.overflow = "auto";
+        document.body.style.overflow = "auto";
+          setTimeout(function() {
           loadingScreen.style.display = 'none';
         }, 1000);
       }, remaining);
