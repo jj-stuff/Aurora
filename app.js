@@ -8,14 +8,14 @@ window.addEventListener('load', function() {
 
 
   const intervalId = setInterval(function() {
-    progress += Math.random() * 40;
+    progress += Math.random() * 200;
     if (progress >= 100) {
       clearInterval(intervalId);
       loadingBar.style.width = '100%';
       const loadingScreen = document.querySelector('.loading-screen');
       const currentTime = new Date().getTime();
       const elapsed = currentTime - startTime;
-      const remaining = Math.max(0, 1500 - elapsed);
+      const remaining = Math.max(0, 800 - elapsed);
       setTimeout(function() {
         loadingScreen.style.opacity = 0;
         document.documentElement.style.overflow = "auto";
@@ -38,7 +38,7 @@ window.addEventListener("scroll", function() {
   let scrollPosition = window.scrollY;
 
   // Calculate the opacity of the background color based on the scroll position
-  let opacity = Math.max(1 - (scrollPosition / 1000), 0.5);
+  let opacity = Math.max(1 - (scrollPosition / 1000), 0.6);
 
   document.body.style.setProperty("--background-opacity", opacity);
   // document.body.style.backgroundColor = "rgba(0, 0, 0, " + opacity + ")";
